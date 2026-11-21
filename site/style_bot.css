@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap');
+
+:root {
+    --bg: #f4f4f4;
+    --card: #ffffff;
+    --primary: #2f2f2f;
+    --secondary: #666666;
+    --accent: #9a9a9a;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--primary);
+    line-height: 1.7;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #2f2f2f, #4a4a4a);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+header h1 {
+    font-family: "Science Gothic", sans-serif;
+    margin: 0;
+    font-size: 3.3rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.logo {
+    position: absolute;
+    width: 150px;
+    top: 10px;
+    left: 10px;
+}
+
+.logo img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+header p {
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    background: var(--card);
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: -40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+nav h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--primary);
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #ededed;
+    display: block;
+    transition-duration: 0.2s;
+}
+
+nav a:hover {
+    background: #dcdcdc;
+}
+
+section {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+section h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    border-left: 6px solid var(--accent);
+    padding-left: 15px;
+}
+
+section h3 {
+    margin-top: 30px;
+    font-size: 1.3rem;
+    color: var(--secondary);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+}
+
+@media(max-width: 1024px) {
+
+    nav ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 790px) {
+
+    header h1 {
+        font-size: 2.4rem;
+        line-height: 1.4;
+    }
+
+    section {
+        padding: 25px;
+    }
+}
+
+@media(max-width: 640px) {
+
+    .logo {
+        position: static;
+    }
+
+    nav ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width: 430px) {
+
+    header {
+        padding-block: 30px;
+    }
+}
+
+#toTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #2f2f2f;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 1000;
+}
+
+#toTop:hover {
+    transform: translateY(-3px);
+}

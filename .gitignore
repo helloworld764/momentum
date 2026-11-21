@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+*.sqlite*
+subscribers.json
+__pycache__/
+*.pyc
+.idea/
+.venv*/
+venv/
